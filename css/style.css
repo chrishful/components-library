@@ -89,6 +89,9 @@ span.material-icons{
 .navigation-two:hover > .navtwo-h:hover, span:hover{
   color:var(--cThree);
 }
+.navigation-two:hover > .navtwo-h:active, span:active{
+  transform:scale(.95); }
+
 @media screen and (min-width: 960px){
   .navigation-two > .navtwo-h{
   margin: 0 1em;
@@ -375,7 +378,7 @@ span.material-icons{
   grid-area:figure;
   margin:1em;
   align-self: center;
-  width:11em;
+  width:6em;
 }
 .media-card-two > .mcname{
   grid-area:title;
