@@ -29,7 +29,7 @@ display:inline-block;
   color: var(--cTwo);
 }
 .navigation-one > .cnav:hover > span{
-  color:lightblue;
+  color:var(--cOne);
 }
 span.material-icons{
   font-size:3em;
@@ -39,8 +39,8 @@ span.material-icons{
   position: absolute;
   width:3em;
   background-color: var(--cOne);
-  border: .1em solid var(--cTwo);
   text-align: center;
+  font-weight: bolder;
 }
 .cnavc > div{
   height:2em;
@@ -53,21 +53,27 @@ span.material-icons{
   width:10em;
   height:2em;
   margin: -1.5em 0 0 2.6em;
-  border: .1em solid var(--cTwo);
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
   text-align: center;
   padding:.3em;
+  font-weight: normal;
+
 }
 .cnavc:hover > div:hover > p{
   display:block;
   width:10em;
   background-color: var(--cOne);
+  cursor: pointer;
 
 }
 .cnav:hover > .cnavc{
  visibility: visible;
+ cursor:pointer;
 }
 .cnavc:hover > div:hover > p:hover{
   color:var(--cTwo);
+
 }
 /* navigation two */
 .navigation-two{
@@ -133,7 +139,6 @@ span.material-icons{
  border: none;
  background: none;
 }
-
 .button-three:before {
  content: "";
  position: absolute;
@@ -146,7 +151,6 @@ span.material-icons{
  height: 45px;
  transition: all 0.3s ease;
 }
-
 .button-three span {
  position: relative;
  font-family: "Ubuntu", sans-serif;
@@ -155,12 +159,10 @@ span.material-icons{
  letter-spacing: 0.05em;
  color: var(--cThree);
 }
-
 .button-three:hover:before {
  width: 100%;
  background: var(--cOne);
 }
-
 .button-three:active {
  transform: scale(0.95);
 }
@@ -182,11 +184,41 @@ span.material-icons{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 2s;
-  font-family:cursive;
 }
 .t-two{
-
+  font-family:Courier New;
+  color:var(--cThree);
+  text-shadow:5px 5px 3px var(--cOne),
+              3px 3px var(--cTwo);
 }
+.t-three{
+  color: var(--cOne);
+  text-transform:uppercase;
+}
+.t-four{
+  color: var(--cTwo);
+  background-color: black;
+  padding:.4em;
+  animation: flicker 1.5s infinite alternate;
+  font-family:'Nosifer', cursive;
+}
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+    0 0 7px var(--cOne),
+    0 0 10px var(--cOne),
+    0 0 21px var(--cOne),
+    0 0 42px var(--cThree),
+   0 0 82px var(--cThree),
+   0 0 92px var(--cThree),
+   0 0 102px var(--cThree),
+   0 0 151px var(--cThree);
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
 
 /* media cards */
 .media-cards{
