@@ -1,12 +1,15 @@
 html{
   display:grid;
   justify-items: center;
+  background-color:var(--cTwo);
 }
 body{
 width:80vw;
 display:grid;
 grid-gap:2em;
 text-align: center;
+background-color: #f2e9ea;
+box-shadow:0 0 2em var(--cThree);
 
 }
 img{
@@ -110,10 +113,21 @@ span.material-icons{
   justify-content: center;
   width:125px;
   background-color: inherit;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  box-shadow:
+  2px 2px 5px var(--cThree),
+  5px 5px 8px var(--cThree);
+
+
 }
 .button-one:hover{
   color:var(--cTwo);
   cursor: grab;
+}
+.button-one:active{
+  box-shadow: none;
+  transform:scale(.98);
 }
 .button-two{
   width:5em;
@@ -195,6 +209,9 @@ span.material-icons{
   color: var(--cOne);
   text-transform:uppercase;
 }
+.t-three:hover{
+  text-transform: none;
+}
 .t-four{
   color: var(--cTwo);
   background-color: black;
@@ -218,13 +235,20 @@ span.material-icons{
     text-shadow: none;
   }
 }
+@media screen and (max-width:960px){
+  .typography {
+    display:flex;
+    flex-direction: column;
 
+  }
+}
 
 /* media cards */
 .media-cards{
   display:flex;
   flex-direction: column;
   align-items: center;
+
 }
 .media-card-one{
   display:flex;
@@ -239,6 +263,7 @@ span.material-icons{
    2px 2px 5px var(--cTwo),
    10px 10px 5px var(--cThree);
   border-radius:1em;
+  padding:1em;
 
 }
 .media-card-one > h1, p, button{
@@ -259,18 +284,33 @@ span.material-icons{
 .media-cards{
   justify-content:space-around;
  }
+ .media-card-two > p{
+   font-size:3ch;
+   padding:0 3em;
+   }
 }
 .media-card-two{
   margin:0 0 1em 1em;
-  border:.1em solid var(--cThree);
+  border-right:.1em solid var(--cThree);
+  border-bottom:.1em solid var(--cThree);
   border-radius:1em;
   width:70%;
   height:auto;
   overflow: hidden;
   display:grid;
   grid-template-areas:
+  "figure title"
   "figure para"
-  "title button";
+  "figure button";
+  box-shadow:
+  1px 1px 1px var(--cThree),
+  3px 3px 5px var(--cThree),
+  10px 10px 10px var(--cThree),
+  0 0 20px var(--cThree);
+  padding:1em;
+
+}
+
 }
 .media-card-two > figure > img{
   height:auto;
@@ -282,12 +322,15 @@ span.material-icons{
 }
 .media-card-two > .mcname{
   grid-area:title;
-  margin:.1em auto;
+  margin:.4em 4em;
+  text-align: left;
+  color:var(--cThree);
 }
 .media-card-two > p{
   grid-area:para;
   text-align: left;
+
 }.media-card-two > button{
   grid-area:button;
-  margin:.1em auto .4em auto;
+  margin:.1em auto .4em 5em;
 }
