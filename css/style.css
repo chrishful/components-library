@@ -19,11 +19,10 @@ display:inline-block;
   --cOne: #f7a6a6;
   --cTwo: #de3535;
   --cThree:#591d1d;
-/* green
+ /*blue*/
   --cOne: #9ebae8;
   --cTwo: #1f5bb8;
   --cThree:#0f2342;
-*/
 /* purple
   --cOne: #f3baf7;
   --cTwo:#bf2cc9;
@@ -330,23 +329,7 @@ span.material-icons{
   align-self: center;
   color:var(--cThree);
 }
-@media screen and (min-width:960px){
-  .media-card-one > figure >img{
-    height:10em;
-  }
-  .media-card-two > figure >img{
-    width:10em;
-  }
-  .media-card-one{
-    width:30vw;
-  }
-.media-cards{
-  justify-content:space-around;
- }
- .media-card-two > p{
-   font-size:3ch;
-   }
-}
+
 .media-card-two{
   margin:0 0 1em 1em;
   border-right:.1em solid var(--cThree);
@@ -355,47 +338,65 @@ span.material-icons{
   width:60%;
   height:auto;
   overflow: hidden;
-  display:grid;
-  grid-template-areas:
-  "figure title"
-  "figure para"
-  "figure button";
+  display:flex;
   box-shadow:
   1px 1px 1px var(--cThree),
   3px 3px 5px var(--cThree),
   10px 10px 10px var(--cThree),
   0 0 20px var(--cThree);
-  padding:1em;
-
 }
-
-}
-.media-card-two > figure > img{
-  height:auto;
+.media-card-two > img{
   width:100%;
+  height:auto;
 }
-.media-card-two > figure{
-  grid-area:figure;
-  margin:1em;
+.mtwocontent > button{
   align-self: center;
-  width:6em;
+  margin: 1em auto;
 }
-.media-card-two > .mcname{
-  grid-area:title;
-  text-align: left;
+.mtwocontent > p, .mtwocontent> h1{
+  margin-right: 1em;
+}
+.media-card-two > .mtwocontent{
+  text-align: right;
   color:var(--cThree);
-  margin: 0 .3em;
+  display:none;
 }
-.media-card-two > p{
-  grid-area: para;
-  text-align: left;
+.media-card-two:hover{
+  display:flex;
+  width:90%;
+}
+.media-card-two:hover > img{
+  width:100%;
+  height:auto;
+}
+.media-card-two:hover > .mtwocontent{
+  display:block;
+}
+@media screen and (min-width:960px){
+  .media-card-one > figure >img{
+    height:10em;
+  }
+  .media-card-one{
+    width:30vw;
+  }
+  .media-card-two{
+    width:20vw;
+  }
+  .media-card-two:hover{
+    width:30vw;
+  }
+  .media-card-two:hover > img:hover{
+  }
+.media-cards{
+  flex-direction:row;
+  justify-content:space-around;
+ }
+}
 
-}.media-card-two > button{
-  grid-area:button;
-}
+/*
 @media screen and (max-width:660px){
   .media-card-two{
     display:flex;
     flex-direction: column;
   }
-}
+}*/
