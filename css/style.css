@@ -23,11 +23,11 @@ display:inline-block;
   --cOne: #9ebae8;
   --cTwo: #1f5bb8;
   --cThree:#0f2342;
-/* purple
+ /* purple*/
   --cOne: #f3baf7;
   --cTwo:#bf2cc9;
   --cThree:#600a66;
-*/
+
 }
 footer{
   color:var(--cOne);
